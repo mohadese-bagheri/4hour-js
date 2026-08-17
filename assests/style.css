@@ -1,0 +1,144 @@
+
+@font-face{
+    font-family: "parastoo";
+    src: url(../assests/font/Parastoo.woff);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    direction: rtl;
+    font-family: parastoo;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg , #444dfc , #b244fc);
+    color: black;
+}
+
+.containor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main_containor{
+    width: 100%;
+    max-width: 520px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 18px 45px rgba(0,0 , 0, 0.18);
+}
+
+.main_containor h2{
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.main_containor p{
+    text-align: center;
+    color:#6b7280;
+}
+
+.input_row{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskinput{
+    font-size: 14px;
+    border: 1px solid #6b7280;
+    padding: 12px 14px;
+    border-radius: 12px;
+    flex: 1;
+    transition: border-color 0.2s ease , box-shadow  0.2s ease;
+}
+
+#taskinput:focus{
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+#add_btn{
+    background: linear-gradient(135deg , #444dfc , #b244fc);
+    padding: 12px 18px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease ,box-shadow 0.2s ease;
+}
+
+#add_btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.35);
+}
+
+#add_btn:active{
+  transform: translateY(0);
+}
+
+#tasklist{
+    list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tasklist li{
+     display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 14px;
+  line-height: 1.5;
+}
+
+.tasktext{
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.deletbutton{
+    border: none;
+  border-radius: 10px;
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.deletbutton:hover{
+     background-color: #dc2626;
+}
+
+@media(max-with:  480px){
+
+    .containor{
+        padding: 20px;
+    }
+
+    .input_row {
+    flex-direction: column;
+  }
+
+  #add_btn{
+    width: 100%;
+  }
+}
